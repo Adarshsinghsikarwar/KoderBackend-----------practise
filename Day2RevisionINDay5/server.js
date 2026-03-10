@@ -34,4 +34,12 @@ app.patch("/notes/:index", (req, res) => {
   const { index } = req.params;
   const { title, description } = req.body;
 
-  
+  notes[index].description = description;
+  res.status(200).json({
+    message: "note updated successfully",
+  });
+});
+
+app.listen(3000, (req, res) => {
+  console.log("Server is running on port 3000");
+});
