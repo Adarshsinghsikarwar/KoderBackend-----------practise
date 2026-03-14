@@ -4,11 +4,6 @@ const userSchema = new mongoose.Schema({
   name: String,
   email: String,
   password: String,
-  userTye: {
-    type: String,
-    enum: ["artist", "user"],
-    default: "user",
-  },
 });
 
 const userModel = mongoose.model("users", userSchema);

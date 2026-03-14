@@ -4,9 +4,9 @@ const userSchema = new mongoose.Schema({
   name: String,
   email: String,
   password: String,
-  userTye: {
+  userType: {
     type: String,
-    enum: ["artist", "user"],
+    enum: ["user", "artist"],
     default: "user",
   },
 });

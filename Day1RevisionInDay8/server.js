@@ -1,0 +1,19 @@
+import express from "express";
+
+const app = express();
+app.use(express.json());
+
+const notes = [];
+
+app.post("/notes", (req, res) => {
+  const note = req.body;
+  notes.push(note);
+
+  res.status(201).json({
+    messsage: "note created suucessfully",
+  });
+});
+
+app.listen(3000, () => {
+  console.log("server is running on port 3000");
+});
